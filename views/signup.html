@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Minerva | Signup</title>
+	<link rel="shortcut icon" type="image/x-icon" href="../images/minerva.png">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  		<a class="navbar-brand" href="index.html">MINERVA</a>
+  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+    		<ul class="navbar-nav ml-auto">
+      			<li class="nav-item">
+        			<a class="nav-link" href="logout.html">Home</a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="../index.html">Signin</a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="signup.html">Signup</a>
+      			</li>    
+   		 	</ul>
+  		</div>  
+	</nav>
+	<div class="container wrap1">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-4 wrap1" style="text-align:right">
+				<h1 >MINERVA</h1>
+				<h3><small>Your Daily </small> Code Review Tool</h3>
+				<strong>MINERVA</strong> is a simple code review tool that makes the process work for your team.
+				<h2>Ship high quality code.</h2>
+				<button class="btn btn-outline-dark rounded-0 tryminerva " onclick="redirectlogin()">Try Minerva</button>
+			</div>
+			<div class="col-md-6 ">
+				<h2 class="text-center">Join MINERVA Today</h2>
+				<div class="card">
+    				<div class="form-group">
+      					<label for="username"><strong>Username :</strong></label>
+      					<input type="text" class="form-control rounded-0 border-warning" id="txtusername" placeholder="Enter Username" name="username" required>
+   					 </div>
+    				<div class="form-group">
+     					<label for="email"><strong>Email :</strong></label>
+      					<input type="email" class="form-control rounded-0 border-warning" id="txtemail" placeholder="Enter Email" name="email" required>
+   					</div>
+   					<div class="form-group">
+     					<label for="pwd"><strong>Password :</strong></label>
+      					<input type="password" class="form-control rounded-0 border-warning" id="txtpassword" placeholder="Enter Password" name="pswd" required>
+   					</div>
+   					<div class="form-check">
+     					<label class="form-check-label">
+       					<input class="form-check-input" type="checkbox" name="remember">By Signing in you agree to our T&C and Privacy Policy</label>
+    				</div>
+    				<button type="submit" onclick="emailsignup()" class="btn btn-warning btn-block"><strong>Submit</strong></button>
+  				</div>
+			</div>
+			<div class="col-md-1"></div>
+		</div>
+	</div>
+	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <script src="../js/aurora.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+body{
+	background-color:orange;
+}
+.wrap {
+	margin: 150px auto;
+}
+.wrap1 {
+	margin: 90px auto;
+}
+.wrap2{
+	margin: 20px auto;
+}
+.wrap3{
+	margin-top:50px;
+}
+.nav-link:hover{
+	font-weight: bold;
+}
+.card{
+	padding: 20px;
+}
+.form-check-label {
+	padding-bottom: 15px; 	
+}
+.btn{
+	padding: 
+}
+.minervaheading{
+	padding: 5px;
+	border-style: solid;
+}
+.tryminerva{
+	margin-top: 10px;
+}
+.clogout{
+	padding: 10px; 
+	border-style: solid; 
+	color: black;
+}
+.list-group{
+	width: 100% !important;
+	color: white;
+	background-color: #515456;
+}
+.list-group-item{
+	background-color: #515456;
+	font-weight: bold;
+}
+.active{
+	color: black !important;
+	font-weight: bold !important;
+	background-color: orange !important;
+	border-color: black !important;
+	border-radius: 0px !important;
+	border-width: 2px !important;
+}
+.welcomeintro {
+	margin-top: 40px;
+	text-align: center;
+}
+.sidewelcome {
+	margin-top: 0px;
+	margin-left: -20px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  	.wrap {
+	margin: 20px auto;
+	}
+	.col-md-4{
+		margin-bottom: 20px;
+	}
+}
+li > img {
+	width: 100%;
+	background-color: white;
+	height:100%;
+}
+#welcomeusername{
+	padding-top: 8px;
+}
+
+.profile{
+	font-weight:bold;
+	margin-bottom: 5px;
+	font-size:14px;  
+}
+.profilebutton{
+	margin-top: 10px;
+}
+.homelogo{
+	margin-top: -70px;
+}

@@ -1,0 +1,159 @@
+$(document).ready(function(){
+  $("#lbody").hide();
+ // $("#pbody").hide();
+});
+
+var gprovider = new firebase.auth.GoogleAuthProvider();
+var fprovider = new firebase.auth.FacebookAuthProvider();
+var giprovider = new firebase.auth.GithubAuthProvider();
+var user;
+
+
+
+// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDdMUuzG3vm-BXUqDGM-gPpoVXpf82Zfdw",
+    authDomain: "aurora-82e44.firebaseapp.com",
+    databaseURL: "https://aurora-82e44.firebaseio.com",
+    projectId: "aurora-82e44",
+    storageBucket: "aurora-82e44.appspot.com",
+    messagingSenderId: "737253435602"
+  };
+
+
+
+
+
+  firebase.initializeApp(config);
+  //Google Sigin
+  function google_signIn() {
+  	firebase.auth().signInWithPopup(gprovider).then(function(result) {
+  	// This gives you a Google Access Token. You can use it to access the Google API.
+  	var token = result.credential.accessToken;
+  	// The signed-in user info.
+  	user = result.user;
+    showWelcomeContainer();
+    console.log(user.displayName);
+    console.log(user.photoURL);
+    console.log(user.email);
+  	// ...
+	 }).catch(function(error) {
+  	// Handle Errors here.
+  	var errorCode = error.code;
+  	var errorMessage = error.message;
+  	// The email of the user's account used.
+  	var email = error.email;
+  	// The firebase.auth.AuthCredential type that was used.
+  	var credential = error.credential;
+  	// ...
+	 });
+  }; 
+
+
+
+
+  //Facebook Signin
+  function facebook_signIn() {
+  	firebase.auth().signInWithPopup(fprovider).then(function(result) {
+  	// This gives you a Facebook Access Token. You can use it to access the Facebook API.
+  	var token = result.credential.accessToken;
+  	// The signed-in user info.
+  	user = result.user;
+    showWelcomeContainer();
+  	// ...
+	}).catch(function(error) {
+  	// Handle Errors here.
+  	var errorCode = error.code;
+  	var errorMessage = error.message;
+  	// The email of the user's account used.
+  	var email = error.email;
+  	// The firebase.auth.AuthCredential type that was used.
+  	var credential = error.credential;
+  	// ...
+	 });
+  };
+
+
+
+  //Github Signup
+  function github_signIn() {
+  	firebase.auth().signInWithPopup(giprovider).then(function(result) {
+  	// This gives you a GitHub Access Token. You can use it to access the GitHub API.
+  	var token = result.credential.accessToken;
+  	// The signed-in user info.
+  	user = result.user;
+    //showWelcomeContainer();
+    window.alert("Hellp");
+  	// ...
+	  }).catch(function(error) {
+  	// Handle Errors here.
+  	var errorCode = error.code;
+  	var errorMessage = error.message;
+  	// The email of the user's account used.
+  	var email = error.email;
+  	// The firebase.auth.AuthCredential type that was used.
+  	var credential = error.credential;
+  	// ...
+	 });
+  };
+
+
+
+
+  //Signout Function
+  function signOut() {
+  	firebase.auth().signOut().then(function() {
+  	// Sign-out successful.
+  	window.alert('Signout successful');
+	 }).catch(function(error) {
+  	// An error happened.
+	 });
+   window.open('logout.html');
+  };
+
+
+
+  //Email Login
+  function emailLogin() {
+  	const email = document.getElementById('txtemail').value;
+    const password = document.getElementById('txtpassword').value;
+    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    window.alert('Error:'+errorMessage);
+    // ...
+    });  
+    showWelcomeContainer();
+  };
+
+
+
+
+  //Email Signup
+  function signup() {
+    const email = document.getElementById('txtemail').value;
+    const password = document.getElementById('txtpassword').value;
+    window.alert(email+password);
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    window.alert('Error:'+errorMessage);
+    // ...
+    });
+  };
+
+function showWelcomeContainer() {
+  $("#lbody").hide();
+  $("#pbody").show();
+  console.log(user.displayName);
+  document.getElementById('welcomeusername').innerHTML = 'Name: '+user.displayName;
+  document.getElementById('welcomeimage').src = user.photoURL;
+  document.getElementById('welcomeemail').innerHTML = 'Email: '+user.email;
+  firebase.database().ref('Users/'+ user.uid).set({
+    username : user.displayName,
+    email : user.email,
+    imageurl : user.photoURL
+  });
+};
