@@ -99,7 +99,21 @@ function emailLogin() {
     window.alert('Error:'+errorMessage);
     // ...
   });  
-    showWelcomeContainer();
+  var user = firebase.auth().currentUser;
+  //showWelcomeContainer2();
+  //var name, email, photoUrl, uid, emailVerified;
+  if (user != null) {
+  firebase.database().ref('Users/'+ user.uid).set({
+    username : user.displayName,
+    email : user.email,
+    imageurl : user.photoURL,
+    emailverified : user.emailVerified,
+    phonenumber : user.phoneNumber
+    });
+    console.log(user.email);
+    console.log(user.emailVerified);
+    normalsign();
+  };
 };
 
 
@@ -113,6 +127,9 @@ function signOut() {
     window.close('index.html');
     window.open('views/logout.html');
  };
+
+ 
+
 
  function changedata() {
   const mobilenumber = document.getElementById('mobilenumber').value;
@@ -128,3 +145,5 @@ function signOut() {
   console.log(mobilenumber);
   console.log(tags);
 };
+
+
