@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "localId": uid,
+      "email": email-address
+      "emailVerified": email-verified,
+      "passwordHash": base64-encoded-password-hash,
+      "salt": base64-encoded-password-salt,
+      "displayName": name,
+      "photoUrl": photo-url,
+      "createdAt": created-at-in-millis,
+      "lastSignedInAt": last-signedin-at-in-millis,
+      "phoneNumber": phone-number
+      "providerUserInfo": [
+        {
+          "providerId": provider-id,
+          "rawId": provider-uid,
+          "email":  provider-email,
+          "displayName": provider-name,
+          "photoUrl": provider-photo-url
+        },
+        ...
+      ]
+    },
+    ...
+  ]
+}
