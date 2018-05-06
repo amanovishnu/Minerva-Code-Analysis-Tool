@@ -14,7 +14,12 @@ body{
 	margin-top:50px;
 }
 .nav-link:hover{
-	font-weight: bold;
+	font-weight: normal;
+	color: white !important;
+	background-color: black !important;
+	border-color: white !important;
+	border-radius: 0px !important;
+	border-width: 2px !important;
 }
 .card{
 	padding: 20px;
@@ -37,19 +42,19 @@ body{
 	border-style: solid; 
 	color: black;
 }
-.list-group{
+.list-group1{
 	width: 100% !important;
 	color: white;
 	background-color: #515456;
 }
-.list-group-item{
+.list-group-item1{
 	background-color: #515456;
 	font-weight: bold;
 }
 .active{
-	color: black !important;
-	font-weight: bold !important;
-	background-color: orange !important;
+	color: white !important;
+	font-weight: normal !important;
+	background-color: black !important;
 	border-color: black !important;
 	border-radius: 0px !important;
 	border-width: 2px !important;

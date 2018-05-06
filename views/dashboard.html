@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dashboard | Minerva</title>
+	<link rel="shortcut icon" type="image/x-icon" href="http://downloadicons.net/sites/default/files/code-icon-23069.png">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/styles.css">
+	<script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
+</head>
+<body>
+	<div class="navbar navbar-expand-lg bg-white navabar-light">
+		<a class="navbar-brand" href="#" style="color: black"><img src="http://downloadicons.net/sites/default/files/code-icon-23069.png" style="margin-right:5px; width:30px; margin-top:-8px;">MINERVA <small style="font-size:12px; font-weight: bold;">BETA</small></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    		<span class="navbar-toggler-icon"></span>
+  		</button>
+  		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+    		<ul class="navbar-nav ml-auto">
+      			<li class="nav-item">
+        			<a class="nav-link active" href="dashboard.html" style="color: black">Dashboard</a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="editinfo.html" style="color: black">Profile Settings</a>
+      			</li>
+      			<li class="nav-item">
+        			<a class="nav-link" href="logout.html" style="color: black">Logout</a>
+      			</li>    
+   		 	</ul>
+  		</div>  
+	</div>
+	<div class="container-fluid" style="margin-top: 10px">
+  		<div class="row">
+  			<div class="col-sm-3 ">	
+  				<ul class="list-group">
+  					<li class="list-group-item "><img  class="img-fluid" src="https://findicons.com/files/icons/61/dragon_soft/256/user.png" alt="MINERVA User"></li>
+  					<li class="list-group-item "><b>Name:</b> Mark Weins</li>
+  					<li class="list-group-item "><b>Job: </b>Senior Code Analyst</li>
+  					<li class="list-group-item "><b>Company: </b>Google Inc</li>
+  					<li class="list-group-item "><b>Tags: </b>PHP, Pyton, JavaScript</li>
+  					<li class="list-group-item "><b>Email: </b>markweins@gmail.com</li>
+  				</ul>
+  			</div>
+  			<div class="col-sm-6 card">
+  				<textarea name="editor1" class="form-control" rows="20" id="comment"></textarea>
+  				<div class="card" style="margin-top: 20px;">
+  					<div class="row">
+  						<div class="col-sm-3">
+  							<div class="card bg-primary text-white text-center"><h1><i class="far fa-file-code"></i></h1><small><a href="#" data-toggle="modal" data-target="#viewissues" style="color: white">View Issues</a></small></div>
+  						</div>
+  						<div class="col-sm-3">
+  							<div class="card bg-success text-white text-center"><h1><i class="fas fa-code"></i></h1><small><a href="#" data-toggle="modal" data-target="#viewrequest" style="color: white">View Requests</a></small></div>
+  						</div>
+  						<div class="col-sm-3">
+  							<div class="card bg-dark text-white text-center"><h1><i class="fab fa-github"></i></h1><small><a href="#" data-toggle="modal" data-target="#importcode" style="color: white">Import Code</a></small></div>
+  						</div>
+  						<div class="col-sm-3">
+  							<div class="card bg-danger text-white text-center"><h1><i class="far fa-envelope"></i></h1><small><a href="#" data-toggle="modal" data-target="#emailnotify" style="color: white">Email Notify</a></small></div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  			<div class="col-sm-3">
+  				<ul class="list-group">
+  					<li class="list-group-item bg-secondary text-white" style="font-weight: 500">Recent Activity</li>
+  					<li class="list-group-item">Issue With Python Snake.</li>
+  					<li class="list-group-item">Semicolon not Working.</li>
+  					<li class="list-group-item">Lorem ipsum dolor sit amet.</li>
+  					<li class="list-group-item">Lorem ipsum dolor sit amet.</li>
+  					<li class="list-group-item">Lorem ipsum dolor sit amet.</li>
+  					<li class="list-group-item">Lorem ipsum dolor sit amet.</li>
+  					<li class="list-group-item">Lorem ipsum dolor sit amet.</li>
+  					<li class="list-group-item">Lorem ipsum dolor sit amet.</li>
+  					<li class="list-group-item">Lorem ipsum dolor sit amet.</li>
+  					<li class="list-group-item">Lorem ipsum dolor sit amet.</li>
+  				</ul>
+  			</div>
+  		</div>
+  	</div>
+  	<!--View Issue Modal -->
+  	<div class="modal" id="viewissues">
+  		<div class="modal-dialog">
+  			<div class="modal-content">
+  				<div class="modal-header">
+  					<div class="modal-title">View Issues</div>
+  					<button class="close" data-dismiss="modal">&times;</button>
+  				</div>
+  				<div class="modal-body">
+  					<p>Backend Code for View Issues Goes Here</p>
+  				</div>
+  				<div class="modal-footer">
+  					<button type="button" class=" btn btn-danger" data-dismiss="modal">Close</button>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  	<!-- End of View Issue Modal -->
+  	<!--View Request Modal -->
+  	<div class="modal" id="viewrequest">
+  		<div class="modal-dialog">
+  			<div class="modal-content">
+  				<div class="modal-header">
+  					<div class="modal-title">View Request</div>
+  					<button class="close" data-dismiss="modal">&times;</button>
+  				</div>
+  				<div class="modal-body">
+  					<p>Backend Code for View Request Goes Here</p>
+  				</div>
+  				<div class="modal-footer">
+  					<button type="button" class=" btn btn-danger" data-dismiss="modal">Close</button>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  	<!-- End of View Request Modal -->
+  	<!--Import Code Modal -->
+  	<div class="modal" id="importcode">
+  		<div class="modal-dialog">
+  			<div class="modal-content">
+  				<div class="modal-header">
+  					<div class="modal-title">Import Code</div>
+  					<button class="close" data-dismiss="modal">&times;</button>
+  				</div>
+  				<div class="modal-body">
+  					<p>Backend Code for Import Code Goes Here</p>
+  				</div>
+  				<div class="modal-footer">
+  					<button type="button" class=" btn btn-danger" data-dismiss="modal">Close</button>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  	<!-- End of Import Code Modal -->
+  	<!--Email Notify Modal -->
+  	<div class="modal" id="emailnotify">
+  		<div class="modal-dialog">
+  			<div class="modal-content">
+  				<div class="modal-header">
+  					<div class="modal-title">Email Notify</div>
+  					<button class="close" data-dismiss="modal">&times;</button>
+  				</div>
+  				<div class="modal-body">
+  					<p>Backend Code for Email Notify Goes Here</p>
+  				</div>
+  				<div class="modal-footer">
+  					<button type="button" class=" btn btn-danger" data-dismiss="modal">Close</button>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+  	<!-- End of Email Notify Modal -->
+	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+	<script src="main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script>
+			CKEDITOR.replace( 'editor1' );
+	</script>
+</body>
+</html>
