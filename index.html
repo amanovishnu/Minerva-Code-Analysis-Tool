@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.ckeditor.com/4.9.2/standard/ckeditor.js"></script>
 </head>
 <body>
 <div id="lbody">
@@ -66,41 +67,169 @@
 	</div>
 </div>
 <div id="pbody">
-	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  		<a class="navbar-brand" href="#">MINERVA</a>
-  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    		<span class="navbar-toggler-icon"></span>
-  		</button>
-  		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-    		<ul class="navbar-nav ml-auto">
-      			<li class="nav-item">
-        			<a class="nav-link" href="views/home.html">Home</a>
-      			</li>
-      			<li class="nav-item">
-        			<a class="nav-link" href="index.html">Signin</a>
-      			</li>
-      			<li class="nav-item">
-        			<a class="nav-link" href="views/signup.html">Signup</a>
-      			</li>    
-   		 	</ul>
-  		</div>  
-	</nav>
-	<div class="container wrap2">
+	<div class="navbar navbar-expand-lg bg-white navabar-light">
+    <a class="navbar-brand" href="#" style="color: black"><img src="http://downloadicons.net/sites/default/files/code-icon-23069.png" style="margin-right:5px; width:30px; margin-top:-8px;">MINERVA <small style="font-size:12px; font-weight: bold;">BETA</small></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="dashboard.html" style="color: black">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="views/editinfo.html" style="color: black">Profile Settings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="views/logout.html" style="color: black">Logout</a>
+            </li>    
+        </ul>
+      </div>  
+  </div>
+	<div class="container-fluid wrap2">
 		<div class="row">
-			<div class="col-sm-3">
-				<img class="img-thumbnail" id="welcomeimage" src="" alt="Profile Image" style="width: 100%">
-				<p class="profile" id="welcomeusername"></p>
-				<p class="profile" id="welcomeemail"></p>
-        <p class="profile" id="welcomeverified"></p>
-        <p class="profile"><a href="views/editinfo.html">Edit Information</a></p>
-				<button type="submit" class="btn btn-outline-dark btn-block rounded-0 profilebutton" onclick="signOut()">LogOut</button>
-			</div>
-      <div class="col-sm-6">
-        <h1></h1>
+      <div class="col-sm-3">
+        <ul class="list-group">
+            <li class="list-group-item "><img class="img-fluid" id="welcomeimage" src="" alt="Profile Image" style="width: 100%"></li>
+            <li class="list-group-item "><p class="profile" id="welcomeusername"></p></li>
+            <li class="list-group-item "><p class="profile" id="welcomeemail"></p></li>
+            <li class="list-group-item "><p class="profile" id="welcomeverified"></p></li>
+            <li class="list-group-item "><p class="profile">Tags: JavaScript, PHP, Python</p>
+            <li class="list-group-item "><p class="profile">Job: Stundet @ NU</p>
+          </ul>
       </div>
+      <div class="col-sm-6 card">
+          <textarea name="editor1" class="form-control" rows="20" id="comment"></textarea>
+          <div class="card" style="margin-top: 20px;">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="card bg-primary text-white text-center"><h1><i class="far fa-file-code"></i></h1><small><a href="#" data-toggle="modal" data-target="#viewissues" style="color: white">View Issues</a></small></div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card bg-success text-white text-center"><h1><i class="fas fa-code"></i></h1><small><a href="#" data-toggle="modal" data-target="#viewrequest"  style="color: white">Upload Code</a></small></div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card bg-dark text-white text-center"><h1><i class="fab fa-github"></i></h1><small><a href="#" data-toggle="modal" data-target="#importcode" style="color: white">Import Code</a></small></div>
+              </div>
+              <div class="col-sm-3">
+                <div class="card bg-danger text-white text-center"><h1><i class="far fa-envelope"></i></h1><small><a href="#" data-toggle="modal" data-target="#emailnotify" onclick="gmailnotify()" style="color: white">Email Notify</a></small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <ul class="list-group">
+            <li class="list-group-item bg-dark text-white" style="font-weight: 500">Recent Activity</li>
+            <li class="list-group-item">Issue With Python Snake.</li>
+            <li class="list-group-item">Semicolon not Working.</li>
+            <li class="list-group-item">Load Checkpoint with TensorFlow.</li>
+            <li class="list-group-item">Python Import Data to CSV</li>
+            <li class="list-group-item">Flume Vs Scoop Hadoop</li>
+            <li class="list-group-item">Hadoop Ecosystem and BigData</li>
+            <li class="list-group-item">Structured and Unstructured Data</li>
+            <li class="list-group-item">MongoDB and Cassandra</li>
+            <li class="list-group-item">Graph Databases in Real Lifes</li>
+            <li class="list-group-item">Cassandra Query Language</li>
+          </ul>
+        </div>
 		</div>
 	</div>
 </div>
+<!--View Issue Modal -->
+    <div class="modal" id="viewissues">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">View Issues</div>
+            <button class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <p>Backend Code for View Issues Goes Here</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class=" btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of View Issue Modal -->
+    <!--View Request Modal -->
+    <div class="modal" id="viewrequest">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Import Code</div>
+            <button class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="uploadcode"><b>Upload Code:</b></label><br>
+              <input type="file" name="uploadcode" id="uploadcode" accept="image/*">
+              <p class="text-center"><b>(or)</b></p>
+              <textarea name="codepaster"  class="form-control" id="none" cols="60" rows="5" placeholder="Place your Code Here"></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class=" btn btn-danger" data-dismiss="modal">Close</button>
+            <button class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of View Request Modal -->
+
+    <!--Import Code Modal -->
+    <div class="modal" id="importcode">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Import Code</div>
+            <button class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="codelink">Link of Code:</label>
+              <input type="text" class="form-control" id="importcode" placeholder="Copy Your Link Here">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="uploadcode()">Send</button>
+            <button type="button" class=" btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Import Code Modal -->
+
+    <!--Email Notify Modal -->
+    <div class="modal" id="emailnotify">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="modal-title">Email Notify</div>
+            <button class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="usr">From:</label>
+              <input type="text" class="form-control" id="from" placeholder="Enter From Address" >
+              <label for="usr">To:</label>
+              <input type="text" class="form-control" id="to" placeholder="Enter To Address">
+              <label for="usr">Subject:</label>
+              <input type="text" class="form-control" id="subject" placeholder="Enter Your Subject">
+              <label for="usr">Message:</label>
+              <textarea class="form-control" row="5" id="message" placeholder="Enter your Message Here"></textarea> 
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Send</button>
+            <button type="button" class=" btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End of Email Notify Modal -->
 	<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
@@ -108,5 +237,9 @@
 	<script src="js/aurora.js"></script>
   <script src="js/auth.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/gmailauth.js"></script>
+  <script>
+      CKEDITOR.replace( 'editor1' );
+  </script>
 </body>
 </html>

@@ -13,6 +13,7 @@ function redirectlogin() {
 };
 
 function showWelcomeContainer() {
+  //window.location.href="views/dashboard.html";
   $("#lbody").hide();
   $("#pbody").show();
   console.log(user.displayName);

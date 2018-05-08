@@ -50,7 +50,6 @@ function twittersigin(){
   	});
 };
 
-
 //Github Auth Function 
 function githubsignin(){
 	firebase.auth().signInWithPopup(githubprovider).then(function(result) {
@@ -129,8 +128,6 @@ function signOut() {
  };
 
  
-
-
  function changedata() {
   const mobilenumber = document.getElementById('mobilenumber').value;
   const username = document.getElementById('username').value;
@@ -146,4 +143,13 @@ function signOut() {
   console.log(tags);
 };
 
+function uploadcode() {
+  const uploadcode = document.getElementById('importcode').value;
+  var user = firebase.auth().currentUser.uid;
+  firebase.database().ref('Users/'+ user).push({
+    GitHublink: uploadcode
+  });
+  console.log(uploadcode);
+
+}
 
