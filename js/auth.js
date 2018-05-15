@@ -147,7 +147,7 @@ function uploadcode() {
   const uploadcode = document.getElementById('importcode').value;
   var user = firebase.auth().currentUser.uid;
   firebase.database().ref('Users/'+ user).push({
-    GitHublink: uploadcode
+    GitHublink : uploadcode
   });
   console.log(uploadcode);
 
