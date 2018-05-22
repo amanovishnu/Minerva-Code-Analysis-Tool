@@ -6,7 +6,7 @@ Static analysis, also called static code analysis, is a method of computer progr
 ### What is a Static Analysis Tool ?
 Static analysis tools are generally used by developers as part of the development and component testing process. The key aspect is that the code (or other artefact) is not executed or run but the tool itself is executed, and the source code we are interested in is the input data to the tool
 
-# Screenshots of Minerva
+# Screenshots-of-Minerva
 
 ![Homepage](Snapshots/Homepage.png)
 
