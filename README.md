@@ -26,3 +26,5 @@
 ![Profile-Settings](Snapshots/ProfileSettings.png)
 
 ![Signout-Page](Snapshots/Signout.png)
+
+<p align:"center">Coded by Mano Vishnu</p>
