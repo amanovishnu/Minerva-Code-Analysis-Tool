@@ -27,4 +27,4 @@
 
 ![Signout-Page](Snapshots/Signout.png)
 
-<p align:"center">Coded by Mano Vishnu</p>
+<p style="text-align:center">Coded by Mano Vishnu</p>
