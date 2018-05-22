@@ -13,7 +13,7 @@
 <p align="center"><b>1.Homepage of Minerva</b></p>
 
 ![Signin-Page](Snapshots/Signin.png)
-<p align="center"><b>1.Homepage of Minerva</b></p>
+<p align="center"><b>2.SignInpage of Minerva</b></p>
 
 ![Signup-Page](Snapshots/Signup.png)
 <p align="center"><b>1.Homepage of Minerva</b></p>
