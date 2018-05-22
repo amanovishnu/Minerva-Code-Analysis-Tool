@@ -13,28 +13,28 @@
 <p align="center"><b>1.Homepage of Minerva</b></p>
 
 ![Signin-Page](Snapshots/Signin.png)
-<p align="center"><b>2.SignInpage of Minerva</b></p>
+<p align="center"><b>2.Sign-In Page</b></p>
 
 ![Signup-Page](Snapshots/Signup.png)
-<p align="center"><b>1.Homepage of Minerva</b></p>
+<p align="center"><b>3.Signup Page</b></p>
 
 ![Dashboard](Snapshots/Dashboard.png)
-<p align="center"><b>1.Homepage of Minerva</b></p>
+<p align="center"><b>4.Dashboard of Minerva</b></p>
 
 ![Email Notify](Snapshots/EmailNotify.png)
-<p align="center"><b>1.Homepage of Minerva</b></p>
+<p align="center"><b>5.Email Notification Feature</b></p>
 
 ![ImportCode](Snapshots/ImportCode.png)
-<p align="center"><b>1.Homepage of Minerva</b></p>
+<p align="center"><b>6.Import Code Feature</b></p>
 
 ![UploadCode](Snapshots/UploadCode.png)
-<p align="center"><b>1.Homepage of Minerva</b></p>
+<p align="center"><b>7.Upload Code Feature</b></p>
 
 ![Profile-Settings](Snapshots/ProfileSettings.png)
-<p align="center"><b>1.Homepage of Minerva</b></p>
+<p align="center"><b>8.Profile Settings Page</b></p>
 
 ![Signout-Page](Snapshots/Signout.png)
-<p align="center"><b>1.Homepage of Minerva</b></p>
+<p align="center"><b>9.Logout Page</b></p>
 
 <p align="center"><b>© Created by Manovishnu</b></p>
 
