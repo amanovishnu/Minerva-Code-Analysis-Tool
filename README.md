@@ -10,22 +10,31 @@
 # Sample-Images
 
 ![Homepage](Snapshots/Homepage.png)
-<p align="center"><b>Homepage of Minerva</b></p>
+<p align="center"><b>1.Homepage of Minerva</b></p>
 
 ![Signin-Page](Snapshots/Signin.png)
+<p align="center"><b>1.Homepage of Minerva</b></p>
 
 ![Signup-Page](Snapshots/Signup.png)
+<p align="center"><b>1.Homepage of Minerva</b></p>
 
 ![Dashboard](Snapshots/Dashboard.png)
+<p align="center"><b>1.Homepage of Minerva</b></p>
 
 ![Email Notify](Snapshots/EmailNotify.png)
+<p align="center"><b>1.Homepage of Minerva</b></p>
 
 ![ImportCode](Snapshots/ImportCode.png)
+<p align="center"><b>1.Homepage of Minerva</b></p>
 
 ![UploadCode](Snapshots/UploadCode.png)
+<p align="center"><b>1.Homepage of Minerva</b></p>
 
 ![Profile-Settings](Snapshots/ProfileSettings.png)
+<p align="center"><b>1.Homepage of Minerva</b></p>
 
 ![Signout-Page](Snapshots/Signout.png)
+<p align="center"><b>1.Homepage of Minerva</b></p>
 
 <p align="center"><b>© Created by Manovishnu</b></p>
+
