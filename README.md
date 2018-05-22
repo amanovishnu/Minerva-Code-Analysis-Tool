@@ -1,6 +1,6 @@
 # Minerva-Code-Analysis-Tool
 <p align="center">
-  <img src="https://d3n8a8pro7vhmx.cloudfront.net/3dna/pages/19142/meta_images/original/code.png?1447285174" width="50%" height="50%"/>
+  <img src="https://d3n8a8pro7vhmx.cloudfront.net/3dna/pages/19142/meta_images/original/code.png?1447285174" width="50%" height="50%"/>Minerva
 </p>
 
 ### What is Static Analysis ?
