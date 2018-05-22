@@ -10,7 +10,7 @@
 # Sample-Images
 
 ![Homepage](Snapshots/Homepage.png)
-
+<p align="center"><b>Homepage of Minerva</b></p>
 ![Signin-Page](Snapshots/Signin.png)
 
 ![Signup-Page](Snapshots/Signup.png)
