@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Minerva | Dashboard</title>
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="shortcut-icon" type="image/x-icon" href="images/minerva.ico" />
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="container text-center adjust" style="margin-top:15em">
+		<h1 style="font-size:5em">Welcome User</h1>
+		<input type="button" class="btn btn-primary" value="Logout" onclick="signout()"/>
+	</div>
+	<button type="button" class="btn btn-primary" onclick="signIn()"><i class="fa fa-google-plus"></i>Sign in With Google</button>
+	<!-- app.js javascript file -->
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script type="text/javascript" src="app.js"></script>
+
+</body>
+</html>
